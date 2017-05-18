@@ -65,6 +65,11 @@
 <script type="text/javascript" src="./script/api.js"></script>
 <script type="text/javascript">
     apiready = function(){
+        
+        const host = {host:"https://v2.fogcloud.io"};
+        var mico2 = api.require('fog2');
+        mico2.init(host);
+        
 		//输出Log，Log将显示在APICloud Studio控制台
 		console.log("Hello APICloud");
 
@@ -93,7 +98,6 @@
 
         var year = $api.byId('year');
         year.innerHTML = new Date().getFullYear();
-
     };
 </script>
 </html>
